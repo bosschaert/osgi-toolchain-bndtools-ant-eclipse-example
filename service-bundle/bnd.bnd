@@ -1,0 +1,5 @@
+Bundle-Version: 0.5
+-buildpath: osgi.core,\
+	api-bundle;version=latest
+Private-Package: org.example.osgi.impl
+Bundle-Activator: org.example.osgi.impl.Activator
