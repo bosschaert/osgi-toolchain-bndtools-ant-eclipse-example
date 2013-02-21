@@ -1,6 +1,7 @@
 -buildpath: api-bundle;version=latest,\
 	osgi.core,\
-	osgi.cmpn
+	osgi.cmpn,\
+	junit.osgi
 Bundle-Version: 0.5
 Private-Package: org.example.osgi.consumer
 Bundle-Activator: org.example.osgi.consumer.Activator

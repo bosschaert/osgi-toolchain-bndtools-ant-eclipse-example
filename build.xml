@@ -28,14 +28,22 @@
         <property name="__mainiterateinit_done" value="set" />
     </target>
 
+    <!-- The default target, builds the bundles -->
     <target name="build" depends="__mainiterateinit">
         <iterate target="build" />
     </target>
 
+    <!-- Execute the unit tests -->
     <target name="junit" depends="__mainiterateinit">
         <iterate target="junit" />
     </target>
 
+    <!-- Execute the integration tests -->
+    <target name="test" depends="__mainiterateinit">
+        <iterate target="test" />
+    </target>
+
+    <!-- Clean up -->
     <target name="clean" depends="__mainiterateinit">
         <iterate target="clean" />
     </target>

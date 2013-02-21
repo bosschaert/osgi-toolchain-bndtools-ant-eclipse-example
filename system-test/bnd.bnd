@@ -1,0 +1,17 @@
+Test-Cases: ${classes;CONCRETE;EXTENDS;junit.framework.TestCase}
+-runbundles: api-bundle;version=latest,\
+	consumer-bundle;version=latest,\
+	service-bundle;version=latest
+Private-Package: org.example.osgi.tests
+-runee: JavaSE-1.6
+-runvm: -ea
+-runfw: org.apache.felix.framework
+-buildpath: osgi.core;version='[4.2,5)',\
+	osgi.cmpn,\
+	junit.osgi,\
+	api-bundle;version=latest
+-runsystempackages: sun.reflect
+-runrequires: osgi.identity;filter:='(osgi.identity=api-bundle)',\
+	osgi.identity;filter:='(osgi.identity=consumer-bundle)',\
+	osgi.identity;filter:='(osgi.identity=service-bundle)'
+-resolve: auto
